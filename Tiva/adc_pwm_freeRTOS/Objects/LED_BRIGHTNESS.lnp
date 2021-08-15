@@ -1,0 +1,16 @@
+--cpu=Cortex-M4.fp
+".\objects\startup_rvmdk.o"
+".\objects\main.o"
+".\objects\uartstdio.o"
+".\objects\ustdlib.o"
+".\objects\list.o"
+".\objects\queue.o"
+".\objects\tasks.o"
+".\objects\timers.o"
+".\objects\port.o"
+".\objects\heap_1.o"
+"C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\rvmdk\driverlib.lib"
+--library_type=microlib --ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict
+--entry Reset_Handler --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\LED_BRIGHTNESS.map" -o .\Objects\LED_BRIGHTNESS.axf

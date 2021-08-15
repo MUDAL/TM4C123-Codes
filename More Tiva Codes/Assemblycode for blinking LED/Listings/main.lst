@@ -1,0 +1,184 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;Assembly code for blinking onboard white LED
+    2 00000000         
+    3 00000000         ;Defining register addresses
+    4 00000000 400FE608 
+                       SYSCTL_RCGCGPIO_R
+                               EQU              0x400FE608
+    5 00000000 40025400 
+                       GPIO_PORTF_DIR_R
+                               EQU              0x40025400
+    6 00000000 4002551C 
+                       GPIO_PORTF_DEN_R
+                               EQU              0x4002551C
+    7 00000000 400253FC 
+                       GPIO_PORTF_DATA_R
+                               EQU              0x400253FC
+    8 00000000         
+    9 00000000                 AREA             |.text|,CODE,READONLY,ALIGN=2
+   10 00000000                 THUMB
+   11 00000000                 EXPORT           main
+   12 00000000         
+   13 00000000         main
+   14 00000000 F000 F806       BL               GPIOF_Init
+   15 00000004         
+   16 00000004         loop
+   17 00000004 F000 F812       BL               TOGGLE_LED
+   18 00000008 480D            LDR              R0,=0xF4240
+   19 0000000A F000 F815       BL               DELAY       ;short delay
+   20 0000000E E7F9            B                loop
+   21 00000010         
+   22 00000010         GPIOF_Init
+   23 00000010         ;Activate clock of port F in RCGCGPIO register
+   24 00000010 490C            LDR              R1, =SYSCTL_RCGCGPIO_R
+   25 00000012 6808            LDR              R0,[R1]
+   26 00000014 F040 0020       ORR              R0,R0,#0x20
+   27 00000018 6008            STR              R0,[R1]
+   28 0000001A         ;================================================
+   29 0000001A         
+   30 0000001A         ;Set GPIO pins 3,2,1 as output
+   31 0000001A 490B            LDR              R1, =GPIO_PORTF_DIR_R
+   32 0000001C F04F 000E       MOV              R0,#0x0E
+   33 00000020 6008            STR              R0,[R1]
+   34 00000022         ;=================================================
+   35 00000022         
+   36 00000022         ;Enable digital functions 
+   37 00000022 490A            LDR              R1, =GPIO_PORTF_DEN_R
+   38 00000024 F04F 000E       MOV              R0, #0x0E
+   39 00000028 6008            STR              R0,[R1]
+   40 0000002A         ;==================================================
+   41 0000002A 4770            BX               LR
+   42 0000002C         
+   43 0000002C         TOGGLE_LED
+   44 0000002C         ;toggle white LED subroutine
+   45 0000002C 4908            LDR              R1, =GPIO_PORTF_DATA_R
+   46 0000002E 6808            LDR              R0,[R1]
+   47 00000030 F080 000E       EOR              R0,R0,#0x0E
+   48 00000034 6008            STR              R0,[R1]
+   49 00000036 4770            BX               LR
+   50 00000038         
+   51 00000038         DELAY
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   52 00000038         ;delay function
+   53 00000038 1E40            SUBS             R0,R0,#1
+   54 0000003A D1FD            BNE              DELAY
+   55 0000003C 4770            BX               LR
+   56 0000003E 00 00           ALIGN
+   57 00000040                 END
+              000F4240 
+              400FE608 
+              40025400 
+              4002551C 
+              400253FC 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\objects\main.d -o.\objects\main.o -I.\RTE\_Tiva_Launchpad -IC
+:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include -IC:\Keil_v5\ARM\PACK\Kei
+l\TM4C_DFP\1.1.0\Device\Include\TM4C123 --predefine="__EVAL SETA 1" --predefine
+="__UVISION_VERSION SETA 526" --predefine="_RTE_ SETA 1" --predefine="TM4C123GH
+6PM SETA 1" --list=.\listings\main.lst main.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 9 in file main.s
+   Uses
+      None
+Comment: .text unused
+DELAY 00000038
+
+Symbol: DELAY
+   Definitions
+      At line 51 in file main.s
+   Uses
+      At line 19 in file main.s
+      At line 54 in file main.s
+
+GPIOF_Init 00000010
+
+Symbol: GPIOF_Init
+   Definitions
+      At line 22 in file main.s
+   Uses
+      At line 14 in file main.s
+Comment: GPIOF_Init used once
+TOGGLE_LED 0000002C
+
+Symbol: TOGGLE_LED
+   Definitions
+      At line 43 in file main.s
+   Uses
+      At line 17 in file main.s
+Comment: TOGGLE_LED used once
+loop 00000004
+
+Symbol: loop
+   Definitions
+      At line 16 in file main.s
+   Uses
+      At line 20 in file main.s
+Comment: loop used once
+main 00000000
+
+Symbol: main
+   Definitions
+      At line 13 in file main.s
+   Uses
+      At line 11 in file main.s
+Comment: main used once
+6 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+GPIO_PORTF_DATA_R 400253FC
+
+Symbol: GPIO_PORTF_DATA_R
+   Definitions
+      At line 7 in file main.s
+   Uses
+      At line 45 in file main.s
+Comment: GPIO_PORTF_DATA_R used once
+GPIO_PORTF_DEN_R 4002551C
+
+Symbol: GPIO_PORTF_DEN_R
+   Definitions
+      At line 6 in file main.s
+   Uses
+      At line 37 in file main.s
+Comment: GPIO_PORTF_DEN_R used once
+GPIO_PORTF_DIR_R 40025400
+
+Symbol: GPIO_PORTF_DIR_R
+   Definitions
+      At line 5 in file main.s
+   Uses
+      At line 31 in file main.s
+Comment: GPIO_PORTF_DIR_R used once
+SYSCTL_RCGCGPIO_R 400FE608
+
+Symbol: SYSCTL_RCGCGPIO_R
+   Definitions
+      At line 4 in file main.s
+   Uses
+      At line 24 in file main.s
+Comment: SYSCTL_RCGCGPIO_R used once
+4 symbols
+347 symbols in table

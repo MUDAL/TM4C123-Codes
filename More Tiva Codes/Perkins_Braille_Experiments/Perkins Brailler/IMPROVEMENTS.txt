@@ -1,0 +1,3 @@
+IMPROVEMENTS TO BE MADE
+
+The software can be optimized (check OPTIMIZED_BRAILLIXIR Arduino code)

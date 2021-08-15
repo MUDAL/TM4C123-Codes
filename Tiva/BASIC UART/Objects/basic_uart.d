@@ -1,0 +1,12 @@
+.\objects\basic_uart.o: basic_UART.c
+.\objects\basic_uart.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\basic_uart.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\basic_uart.o: C:\ti\TivaWare_C_Series-2.1.4.178\inc/hw_gpio.h
+.\objects\basic_uart.o: C:\ti\TivaWare_C_Series-2.1.4.178\inc/hw_memmap.h
+.\objects\basic_uart.o: C:\ti\TivaWare_C_Series-2.1.4.178\inc/hw_types.h
+.\objects\basic_uart.o: C:\ti\TivaWare_C_Series-2.1.4.178\driverlib/gpio.h
+.\objects\basic_uart.o: C:\ti\TivaWare_C_Series-2.1.4.178\driverlib/pin_map.h
+.\objects\basic_uart.o: C:\ti\TivaWare_C_Series-2.1.4.178\driverlib/rom.h
+.\objects\basic_uart.o: C:\ti\TivaWare_C_Series-2.1.4.178\driverlib/rom_map.h
+.\objects\basic_uart.o: C:\ti\TivaWare_C_Series-2.1.4.178\driverlib/sysctl.h
+.\objects\basic_uart.o: basic_UART.h

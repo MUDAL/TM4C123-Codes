@@ -1,0 +1,12 @@
+.\objects\mygpio.o: MyGPIO.c
+.\objects\mygpio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\mygpio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\mygpio.o: C:\ti\TivaWare_C_Series-2.1.4.178\inc/hw_gpio.h
+.\objects\mygpio.o: C:\ti\TivaWare_C_Series-2.1.4.178\inc/hw_memmap.h
+.\objects\mygpio.o: C:\ti\TivaWare_C_Series-2.1.4.178\inc/hw_types.h
+.\objects\mygpio.o: C:\ti\TivaWare_C_Series-2.1.4.178\driverlib/gpio.h
+.\objects\mygpio.o: C:\ti\TivaWare_C_Series-2.1.4.178\driverlib/pin_map.h
+.\objects\mygpio.o: C:\ti\TivaWare_C_Series-2.1.4.178\driverlib/rom.h
+.\objects\mygpio.o: C:\ti\TivaWare_C_Series-2.1.4.178\driverlib/rom_map.h
+.\objects\mygpio.o: C:\ti\TivaWare_C_Series-2.1.4.178\driverlib/sysctl.h
+.\objects\mygpio.o: MyGPIO.h

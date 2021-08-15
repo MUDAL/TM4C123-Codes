@@ -1,0 +1,46 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             |.text|,CODE,READONLY,ALIGN=2
+    2 00000000                 THUMB
+    3 00000000                 EXPORT           Number
+    4 00000000         
+    5 00000000         Number
+    6 00000000 F04F 0079       MOV              R0,#121
+    7 00000004 6000            STR              R0,[R0]
+    8 00000006 4770            BX               LR
+    9 00000008                 ALIGN
+   10 00000008                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\objects\function.d -o.\objects\function.o -I.\RTE\_Tm4c123 -I
+C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include -IC:\Keil_v5\ARM\PACK\Ke
+il\TM4C_DFP\1.1.0\Device\Include\TM4C123 --predefine="__EVAL SETA 1" --predefin
+e="__UVISION_VERSION SETA 526" --predefine="_RTE_ SETA 1" --predefine="TM4C123G
+H6PM SETA 1" --list=.\listings\function.lst function.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 1 in file function.s
+   Uses
+      None
+Comment: .text unused
+Number 00000000
+
+Symbol: Number
+   Definitions
+      At line 5 in file function.s
+   Uses
+      At line 3 in file function.s
+Comment: Number used once
+2 symbols
+337 symbols in table

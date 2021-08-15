@@ -1,0 +1,8 @@
+				ELECTRONIC BRAILLE MACHINE
+
+* The electronic braille machine adopts some features of a traditional 'perkins brailler' typewriter.
+* It has 6 keys for producing characters, a space bar key and a backspace key.
+* The electronic braille machine is a microcontroller based device that uses serial communication
+  to transfer characters to a computer.
+* It also includes a text-to-speech converter to enable braille users understand what they type.
+* Technical details about code and hardware can be found in the README document.

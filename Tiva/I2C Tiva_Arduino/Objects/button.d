@@ -1,0 +1,14 @@
+.\objects\button.o: BUTTON.c
+.\objects\button.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\button.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\button.o: C:\ti\TivaWare_C_Series-2.1.4.178\inc/hw_gpio.h
+.\objects\button.o: C:\ti\TivaWare_C_Series-2.1.4.178\inc/hw_memmap.h
+.\objects\button.o: C:\ti\TivaWare_C_Series-2.1.4.178\inc/tm4c123gh6pm.h
+.\objects\button.o: C:\ti\TivaWare_C_Series-2.1.4.178\inc/hw_types.h
+.\objects\button.o: C:\ti\TivaWare_C_Series-2.1.4.178\driverlib/gpio.h
+.\objects\button.o: C:\ti\TivaWare_C_Series-2.1.4.178\driverlib/pin_map.h
+.\objects\button.o: C:\ti\TivaWare_C_Series-2.1.4.178\driverlib/rom.h
+.\objects\button.o: C:\ti\TivaWare_C_Series-2.1.4.178\driverlib/rom_map.h
+.\objects\button.o: C:\ti\TivaWare_C_Series-2.1.4.178\driverlib/sysctl.h
+.\objects\button.o: C:\ti\TivaWare_C_Series-2.1.4.178\driverlib/timer.h
+.\objects\button.o: BUTTON.h

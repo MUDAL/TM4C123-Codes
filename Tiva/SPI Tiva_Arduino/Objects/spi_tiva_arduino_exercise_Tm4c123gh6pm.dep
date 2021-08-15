@@ -1,0 +1,54 @@
+Dependencies for Project 'spi_tiva_arduino_exercise', Target 'Tm4c123gh6pm': (DO NOT MODIFY !)
+F (.\main.c)(0x5EFC360F)(--c99 --gnu -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I C:\ti\TivaWare_C_Series-2.1.4.178 --c99-I.\RTE\_Tm4c123gh6pm-IC:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DTM4C123GH6PM-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\hw_memmap.h)(0x5E53F68E)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\hw_types.h)(0x5E53F68F)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\tm4c123gh6pm.h)(0x5E53F68F)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\timer.h)(0x5E53F675)
+I (Button.h)(0x5EFC35C7)
+I (SPI.h)(0x5EFAE9FD)
+I (Timer.h)(0x5EFB7638)
+F (.\SPI.c)(0x5EFB7D4A)(--c99 --gnu -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I C:\ti\TivaWare_C_Series-2.1.4.178 --c99-I.\RTE\_Tm4c123gh6pm-IC:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DTM4C123GH6PM-o .\objects\spi.o --omf_browse .\objects\spi.crf --depend .\objects\spi.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\hw_gpio.h)(0x5E53F68E)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\hw_memmap.h)(0x5E53F68E)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\hw_types.h)(0x5E53F68F)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\tm4c123gh6pm.h)(0x5E53F68F)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\gpio.h)(0x5E53F674)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\pin_map.h)(0x5EF48CCE)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\rom.h)(0x5E53F675)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\rom_map.h)(0x5E53F675)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\sysctl.h)(0x5E53F675)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\ssi.h)(0x5E53F675)
+I (SPI.h)(0x5EFAE9FD)
+F (C:\ti\TivaWare_C_Series-2.1.4.178\examples\project\startup_rvmdk.S)(0x5EFB5E5D)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_Tm4c123gh6pm-IC:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 526" --pd "TM4C123GH6PM SETA 1"--list .\listings\startup_rvmdk.lst --xref -o .\objects\startup_rvmdk.o --depend .\objects\startup_rvmdk.d)
+F (.\SPI.h)(0x5EFAE9FD)()
+F (.\Button.c)(0x5EFC3537)(--c99 --gnu -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I C:\ti\TivaWare_C_Series-2.1.4.178 --c99-I.\RTE\_Tm4c123gh6pm-IC:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DTM4C123GH6PM-o .\objects\button.o --omf_browse .\objects\button.crf --depend .\objects\button.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\hw_gpio.h)(0x5E53F68E)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\hw_memmap.h)(0x5E53F68E)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\tm4c123gh6pm.h)(0x5E53F68F)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\hw_types.h)(0x5E53F68F)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\gpio.h)(0x5E53F674)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\pin_map.h)(0x5EF48CCE)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\rom.h)(0x5E53F675)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\rom_map.h)(0x5E53F675)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\sysctl.h)(0x5E53F675)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\timer.h)(0x5E53F675)
+I (Button.h)(0x5EFC35C7)
+F (.\Button.h)(0x5EFC35C7)()
+F (.\Timer.c)(0x5EFB7D29)(--c99 --gnu -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I C:\ti\TivaWare_C_Series-2.1.4.178 --c99-I.\RTE\_Tm4c123gh6pm-IC:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DTM4C123GH6PM-o .\objects\timer.o --omf_browse .\objects\timer.crf --depend .\objects\timer.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\hw_memmap.h)(0x5E53F68E)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\hw_types.h)(0x5E53F68F)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\hw_ints.h)(0x5E53F68E)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\sysctl.h)(0x5E53F675)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\timer.h)(0x5E53F675)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\interrupt.h)(0x5E53F674)
+I (Timer.h)(0x5EFB7638)
+F (.\Timer.h)(0x5EFB7638)()
+F (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\rvmdk\driverlib.lib)(0x5E53F676)()

@@ -1,0 +1,14 @@
+.\objects\i2c.o: I2C.c
+.\objects\i2c.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\i2c.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\i2c.o: C:\ti\TivaWare_C_Series-2.1.4.178\inc/hw_gpio.h
+.\objects\i2c.o: C:\ti\TivaWare_C_Series-2.1.4.178\inc/hw_memmap.h
+.\objects\i2c.o: C:\ti\TivaWare_C_Series-2.1.4.178\inc/hw_types.h
+.\objects\i2c.o: C:\ti\TivaWare_C_Series-2.1.4.178\inc/tm4c123gh6pm.h
+.\objects\i2c.o: C:\ti\TivaWare_C_Series-2.1.4.178\driverlib/gpio.h
+.\objects\i2c.o: C:\ti\TivaWare_C_Series-2.1.4.178\driverlib/pin_map.h
+.\objects\i2c.o: C:\ti\TivaWare_C_Series-2.1.4.178\driverlib/rom.h
+.\objects\i2c.o: C:\ti\TivaWare_C_Series-2.1.4.178\driverlib/rom_map.h
+.\objects\i2c.o: C:\ti\TivaWare_C_Series-2.1.4.178\driverlib/sysctl.h
+.\objects\i2c.o: C:\ti\TivaWare_C_Series-2.1.4.178\driverlib/i2c.h
+.\objects\i2c.o: I2C.h

@@ -1,0 +1,204 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;Assembly code to toggle LED with button press
+    2 00000000         
+    3 00000000         ;External hardware:
+    4 00000000         ;-RC filter {R = 1Megaohms, C = 100nF}
+    5 00000000         ;-Pullup resistor of 10k
+    6 00000000         ;-Tactile Button
+    7 00000000         ;-LED
+    8 00000000         
+    9 00000000         ;Working (Expected)
+   10 00000000         ;First press, LED on
+   11 00000000         ;Second press, LED off
+   12 00000000         ;Third press, LED on
+   13 00000000         ;etc.
+   14 00000000         
+   15 00000000         ;Working (Observed)
+   16 00000000         ;Project works such that a button press
+   17 00000000         ;triggers the LED then it goes off.
+   18 00000000         ;This is because the processor is too fast
+   19 00000000         ;in jumping from the LED routines back to
+   20 00000000         ;the Loop. (In high level languages, conditionals and fl
+                       ags would've done the trick)
+   21 00000000         
+   22 00000000         ;PB0 --> Button
+   23 00000000         ;PB1 --> LED
+   24 00000000         
+   25 00000000 400FE608 
+                       SYSCTL_RCGCGPIO_R
+                               EQU              0x400FE608
+   26 00000000 40005400 
+                       GPIO_PORTB_DIR_R
+                               EQU              0x40005400
+   27 00000000 4000551C 
+                       GPIO_PORTB_DEN_R
+                               EQU              0x4000551C
+   28 00000000 400053FC 
+                       GPIO_PORTB_DATA_R
+                               EQU              0x400053FC
+   29 00000000         
+   30 00000000                 AREA             |.text|, CODE, READONLY, ALIGN=
+2
+   31 00000000                 THUMB
+   32 00000000                 EXPORT           Main
+   33 00000000         Main
+   34 00000000 F000 F807       BL               GPIOB_Init
+   35 00000004         
+   36 00000004         Loop
+   37 00000004 490F            LDR              R1, =GPIO_PORTB_DATA_R
+   38 00000006 6808            LDR              R0,[R1]
+   39 00000008 2800            CMP              R0,#0x00
+   40 0000000A D010            BEQ              LED_ON
+   41 0000000C 2802            CMP              R0,#0x02
+   42 0000000E D013            BEQ              LED_OFF
+   43 00000010 E7F8            B                Loop
+   44 00000012         
+   45 00000012         GPIOB_Init
+   46 00000012         ;Activate clock for Port B
+   47 00000012 490D            LDR              R1, =SYSCTL_RCGCGPIO_R
+   48 00000014 6808            LDR              R0,[R1]
+   49 00000016 F040 0002       ORR              R0,R0,#0x02
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   50 0000001A 6008            STR              R0,[R1]
+   51 0000001C         ;PB0 as input, PB1 as output
+   52 0000001C 490B            LDR              R1, =GPIO_PORTB_DIR_R
+   53 0000001E F04F 0002       MOV              R0,#0x02
+   54 00000022 6008            STR              R0,[R1]
+   55 00000024         ;Enable digital functions 
+   56 00000024 490A            LDR              R1, =GPIO_PORTB_DEN_R
+   57 00000026 F04F 0003       MOV              R0, #0x03
+   58 0000002A 6008            STR              R0,[R1]
+   59 0000002C         
+   60 0000002C 4770            BX               LR
+   61 0000002E         
+   62 0000002E         LED_ON
+   63 0000002E 4905            LDR              R1, =GPIO_PORTB_DATA_R
+   64 00000030 F04F 0002       MOV              R0,#0x02
+   65 00000034 6008            STR              R0,[R1]
+   66 00000036 4770            BX               LR
+   67 00000038         
+   68 00000038         LED_OFF
+   69 00000038 4902            LDR              R1, =GPIO_PORTB_DATA_R
+   70 0000003A F04F 0000       MOV              R0,#0x00
+   71 0000003E 6008            STR              R0,[R1]
+   72 00000040 4770            BX               LR
+   73 00000042         
+   74 00000042 00 00           ALIGN
+   75 00000044                 END
+              400053FC 
+              400FE608 
+              40005400 
+              4000551C 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\objects\main.d -o.\objects\main.o -I.\RTE\_Tm4c123 -IC:\Keil_
+v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include -IC:\Keil_v5\ARM\PACK\Keil\TM4C_
+DFP\1.1.0\Device\Include\TM4C123 --predefine="__EVAL SETA 1" --predefine="__UVI
+SION_VERSION SETA 526" --predefine="_RTE_ SETA 1" --predefine="TM4C123GH6PM SET
+A 1" --list=.\listings\main.lst main.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 30 in file main.s
+   Uses
+      None
+Comment: .text unused
+GPIOB_Init 00000012
+
+Symbol: GPIOB_Init
+   Definitions
+      At line 45 in file main.s
+   Uses
+      At line 34 in file main.s
+Comment: GPIOB_Init used once
+LED_OFF 00000038
+
+Symbol: LED_OFF
+   Definitions
+      At line 68 in file main.s
+   Uses
+      At line 42 in file main.s
+Comment: LED_OFF used once
+LED_ON 0000002E
+
+Symbol: LED_ON
+   Definitions
+      At line 62 in file main.s
+   Uses
+      At line 40 in file main.s
+Comment: LED_ON used once
+Loop 00000004
+
+Symbol: Loop
+   Definitions
+      At line 36 in file main.s
+   Uses
+      At line 43 in file main.s
+Comment: Loop used once
+Main 00000000
+
+Symbol: Main
+   Definitions
+      At line 33 in file main.s
+   Uses
+      At line 32 in file main.s
+Comment: Main used once
+6 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+GPIO_PORTB_DATA_R 400053FC
+
+Symbol: GPIO_PORTB_DATA_R
+   Definitions
+      At line 28 in file main.s
+   Uses
+      At line 37 in file main.s
+      At line 63 in file main.s
+      At line 69 in file main.s
+
+GPIO_PORTB_DEN_R 4000551C
+
+Symbol: GPIO_PORTB_DEN_R
+   Definitions
+      At line 27 in file main.s
+   Uses
+      At line 56 in file main.s
+Comment: GPIO_PORTB_DEN_R used once
+GPIO_PORTB_DIR_R 40005400
+
+Symbol: GPIO_PORTB_DIR_R
+   Definitions
+      At line 26 in file main.s
+   Uses
+      At line 52 in file main.s
+Comment: GPIO_PORTB_DIR_R used once
+SYSCTL_RCGCGPIO_R 400FE608
+
+Symbol: SYSCTL_RCGCGPIO_R
+   Definitions
+      At line 25 in file main.s
+   Uses
+      At line 47 in file main.s
+Comment: SYSCTL_RCGCGPIO_R used once
+4 symbols
+347 symbols in table

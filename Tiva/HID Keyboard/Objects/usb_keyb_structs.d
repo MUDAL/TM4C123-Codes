@@ -1,0 +1,13 @@
+.\objects\usb_keyb_structs.o: usb_keyb_structs.c
+.\objects\usb_keyb_structs.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\usb_keyb_structs.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\usb_keyb_structs.o: C:\ti\TivaWare_C_Series-2.2.0.295\inc/hw_types.h
+.\objects\usb_keyb_structs.o: C:\ti\TivaWare_C_Series-2.2.0.295\driverlib/usb.h
+.\objects\usb_keyb_structs.o: C:\ti\TivaWare_C_Series-2.2.0.295\usblib/usblib.h
+.\objects\usb_keyb_structs.o: C:\ti\TivaWare_C_Series-2.2.0.295\usblib/usbhid.h
+.\objects\usb_keyb_structs.o: C:\ti\TivaWare_C_Series-2.2.0.295\usblib/usb-ids.h
+.\objects\usb_keyb_structs.o: C:\ti\TivaWare_C_Series-2.2.0.295\usblib/device/usbdevice.h
+.\objects\usb_keyb_structs.o: C:\ti\TivaWare_C_Series-2.2.0.295\usblib/device/usbdevicepriv.h
+.\objects\usb_keyb_structs.o: C:\ti\TivaWare_C_Series-2.2.0.295\usblib/device/usbdhid.h
+.\objects\usb_keyb_structs.o: C:\ti\TivaWare_C_Series-2.2.0.295\usblib/device/usbdhidkeyb.h
+.\objects\usb_keyb_structs.o: usb_keyb_structs.h
